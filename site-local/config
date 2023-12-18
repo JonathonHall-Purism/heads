@@ -1,0 +1,9 @@
+# Acme Inc. prefers to greet customers viewing config files
+export CONFIG_ACME_HELLO=welcome
+BRAND_NAME=AcmeBoot
+# Acme Inc. management requires text-based whiptail on all devices, enable it
+# and disable fbwhiptail
+CONFIG_SLANG=y
+CONFIG_NEWT=y
+CONFIG_CAIRO=n
+CONFIG_FBWHIPTAIL=n
