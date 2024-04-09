@@ -64,7 +64,7 @@ jobs:
             git reset --hard "$CIRCLE_SHA1" \
 
       - run:
-          name: WIP: check version
+          name: WIP check version
           command: [[ "$(git describe --tags --abbrev=7 --dirty | tee /dev/stderr)" = v5.0.1* ]]
       - run:
           name: Make tmp dir
