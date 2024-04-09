@@ -55,6 +55,10 @@ jobs:
             apt install -y build-essential zlib1g-dev uuid-dev libdigest-sha-perl libelf-dev bc bzip2 bison flex git gnupg gawk iasl m4 nasm patch python python2 python3 wget gnat cpio ccache pkg-config cmake libusb-1.0-0-dev autoconf texinfo ncurses-dev doxygen graphviz udev libudev1 libudev-dev automake libtool rsync innoextract sudo imagemagick libncurses5-dev
       - checkout
       - run:
+          name: git fetch --tags
+          command: |
+            git fetch --tags "$CIRCLE_REPOSITORY_URL"
+      - run:
           name: git reset
           command: |
             git reset --hard "$CIRCLE_SHA1" \
